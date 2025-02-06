@@ -18,7 +18,7 @@ body, html{
 }
 
 .wrapper{
-  max-width: 480px;
+  max-width: 960px;
   width: 100%;
   margin: 0 auto;
 }
@@ -122,12 +122,12 @@ article h2.open-forever{
   background-image: url('../images/open-james-lee.jpg');
 }
 
-.product {
-    margin-right: 1em;
-    padding: 1em;
-    background: #CCCCCC;
+.product{
+  margin-right: 1em;
+  padding: 1em;
+  background: #CCCCCC;
+  text-align: center;
 }
-
 .product:last-of-type{
   margin-right: 0;
 }
@@ -149,7 +149,6 @@ button{
   border: 2px solid #FCFCFC;
   color: #000000;
   font-weight: bold;
-  cursor: pointer;
 }
 
 .payment-option{
@@ -174,10 +173,10 @@ footer{
 }
 
 .hidden-on-lg{
- 
+  display: none;
 }
 .hidden-on-sm{
-
+  display: block;
 }
 
 /* 
@@ -187,7 +186,13 @@ footer{
 */
 
 @media (max-width: 480px) {
+  .hidden-on-sm {
+    display: block;  /* Toon het kleine logo */
+  }
 
+  .hidden-on-lg {
+    display: none;   /* Verberg het grote logo */
+  }
 }
 
 /* 
@@ -201,18 +206,20 @@ footer{
     width: 256px;
   }
 
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-    justify-content: center; /* Zet de items netjes in het midden */
+  .row{
+    flex-direction: column;
   }
-  .side-by-side {
-    display: flex;
+  .sidy-by-side{
     flex-direction: column;
     align-items: center;
   }
-  
+  .hidden-on-sm {
+    display: none;   /* Verberg het kleine logo */
+  }
+
+  .hidden-on-lg {
+    display: block;  /* Toon het grote logo */
+  }
 }
 
 /*
